@@ -38,8 +38,8 @@ def replace(path, R):
                 os.rename(os.path.join(path, n), os.path.join(path, nn))   
                 fcount += 1
 
-    print(f"working folder: {path}")
-    print(f"changed {dcount} folder name(s), {fcount} file name(s)")
+    if dcount != 0 or fcount != 0:
+        print(f"Changed {dcount} folder name(s), {fcount} file name(s) in '{path}'")
 
     if R:
         for d in subdirs:
